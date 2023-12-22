@@ -1,4 +1,4 @@
-# Formação Django
+# Formação Django Udemy
 
 - Base da Programação Web
 	## Arquitetura Cliente-Servidor
@@ -66,6 +66,8 @@
 		Models:
 			- modelos de dados;
 			
+			função str: apresenta objeto instânciado de acordo com parâmetros desejados
+			
 		Views:
 			- atual como o Controller na arquitetura MVC;
 			- views são criadas nas aplicações e são funções python que recebem uma variável chamada request e retorna a renderização desse request passando um template;
@@ -77,3 +79,16 @@
 			- de forma profissional, não é recomendado adicionar todas as rotas no arquivo de urls do projeto, o recomendado é adicionar um include no urls.py e especificar uma a uma as rotas para direcionar ao arquivo de rotas das aplicações;
 			- importa das views as funções ex.: from core.views import index, contato;
 			- em seguida cria-se os caminhos ex.: path('contato', contato);
+			
+		Área Administrativa / ADMIN.py
+			Importa os modelos e os registra na administração;
+			Possibilita manipulação de uma área administrativa para controle de autenticação, usuários e modelos;
+			python manage.py createsuperuser (cria usuario admin)
+		
+	## Django Shell
+		possibilita interação direta com o projeto django, através do console.
+		python manage.py shell (comando para iniciar o shell)
+		exemplo de uso:
+			- from coreAplication.models import Produto (importa modelo Produto para o shell)
+			- dir(Produto) (lista dados contidos em Produtos)
+			- Produto.objects.count() (conta quantidade de produtos)
